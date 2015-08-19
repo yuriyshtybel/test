@@ -1,0 +1,6 @@
+%script#playlist_item_template{:type => "text/x-custom-template"}
+  %li
+    %span{:title => raw("<%=title%>")}
+      %a{:href => 'javascript:return false;'}
+        %img{:height => 75, :width => 120, :src => raw("<%=image%>")}
+        <%=title%>

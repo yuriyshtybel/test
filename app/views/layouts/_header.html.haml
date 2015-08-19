@@ -1,0 +1,13 @@
+%nav.navbar.navbar-default.navbar-fixed-top
+  .container
+    .navbar-header
+      %a.navbar-brand{:href => "#"} Player
+    #navbar.navbar-collapse.collapse
+      %ul.nav.navbar-nav
+        %li
+          = link_to 'via RSS', via_rss_players_path
+        %li
+          = link_to 'via JS', via_js_players_path
+
+%script
+  $('.navbar a[href="'+window.location.pathname+'"]').parent().addClass('active');

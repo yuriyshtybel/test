@@ -1,0 +1,11 @@
+= stylesheet_link_tag "playlist", :media => "all"
+
+#player
+#playlist
+  %ul
+
+= render :partial => 'templates/playlist_item'
+
+= javascript_include_tag "http://content.jwplatform.com/libraries/gJahAIRn.js"
+= javascript_include_tag "tmpl"
+= javascript_include_tag "players/via_rss"
