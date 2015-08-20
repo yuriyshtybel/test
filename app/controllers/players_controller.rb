@@ -5,4 +5,7 @@ class PlayersController < ApplicationController
 
   def via_js
   end
+
+  def via_js_left
+  end
 end

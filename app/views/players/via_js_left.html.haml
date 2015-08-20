@@ -1,12 +1,10 @@
-= stylesheet_link_tag "playlist", :media => "all"
-= stylesheet_link_tag "players/via_js", :media => "all"
+= stylesheet_link_tag "players/via_js_left", :media => "all"
 
 .margin_bottom_40
-  %h2 Playlist Player with Custom Playlist
+  %h2 Playlist Player with Custom Playlist on the Left
   Main features used on this page:
   %ul
-    %li
-      multiple jwPlayers are used here
+    %li multiple jwPlayers are used here
     %li
       parsing playlist
       = link_to 'RSS(XML) from zype.com', 'https://rss.zype.com/videos?active=true&api_key=QprlJOX1HTL02gc35swumuuJmVwvjHH8Avt2-6P_ASRvGDSY6n5iXY6j6RaFp1mh', :target => '_blank'
@@ -20,9 +18,7 @@
     %li
       making from parsed data a
       %i custom playlist
-      below jwPlayer div-container,
-      %b which looks like its a part of the player, but it's not.
-      It is custom made
+      on left side of the page
     %li
       %i custom playlist
       items are rendered dynamically, using small
@@ -42,14 +38,17 @@
 
   Conclusions:
   %ul
-    %li this is not a standard playlist from jwPlayer, instead video players are always changing each other (multiple players) in jwPlayer div-container
-    %li due to very good styling, playlist looks like part of player
+    %li this is not a standard playlist from jwPlayer, instead video players on the right side are always changing each other (multiple players)
+    %li
+      this page differs from
+      %b via JS
+      page only with CSS styles
 
-#player
 #playlist
   %ul
+#player
 
 = render :partial => 'templates/playlist_item'
 
 = javascript_include_tag "tmpl"
-= javascript_include_tag "players/via_js"
+= javascript_include_tag "players/via_js_left"

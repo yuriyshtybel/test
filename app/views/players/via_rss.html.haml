@@ -1,5 +1,44 @@
 = stylesheet_link_tag "playlist", :media => "all"
 
+.margin_bottom_40
+  %h2 Playlist Player with Standard+Custom Playlists
+  Main features used on this page:
+  %ul
+    %li single jwPlayer is used here
+    %li
+      playlist
+      = link_to 'RSS(XML) from jwplayer.com', 'http://content.jwplatform.com/feeds/13ShtP5m.rss', :target => '_blank'
+      (standard RSS with proper video urls)
+      is set as attribute, when creating jwPlayer instance
+    %li
+      then with
+      %i jwPlayer.getPlaylist()
+      we get playlist items data and make a
+      %i custom playlist
+      below jwPlayer div-container,
+      %b which looks like its a part of the player, but it's not.
+      It is custom made
+    %li
+      %i custom playlist
+      items are rendered dynamically, using small
+      = link_to 'template engine', 'https://github.com/yuriyshtybel/test/blob/master/app/assets/javascripts/tmpl.js', :target => '_blank'
+      and
+      = link_to 'HAML template file', 'https://github.com/yuriyshtybel/test/blob/master/app/views/templates/_playlist_item.html.haml', :target => '_blank'
+    %li
+      %i custom playlist
+      can switch videos when you click playlist items
+
+  Conclusions:
+  %ul
+    %li
+      player has its own
+      %i standard
+      playlist(near Play button), plus we rendered a
+      %i custom
+      one
+    %li videos are always played in single player instance
+    %li due to very good styling, custom playlist looks like part of player
+
 #player
 #playlist
   %ul

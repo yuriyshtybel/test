@@ -6,6 +6,7 @@ Player::Application.routes.draw do
     collection do
       get 'via_rss'
       get 'via_js'
+      get 'via_js_left'
     end
   end
 
