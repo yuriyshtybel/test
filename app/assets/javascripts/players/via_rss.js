@@ -3,7 +3,7 @@ $(document).ready(function() {
   player_instance = jwplayer("player");
 
   player_instance.setup({
-    playlist: "http://content.jwplatform.com/feeds/13ShtP5m.rss",
+    playlist: "https://content.jwplatform.com/feeds/13ShtP5m.rss",
     displaytitle: false,
     autostart: true,
     width: 680,

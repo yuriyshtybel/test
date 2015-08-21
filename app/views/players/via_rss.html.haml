@@ -7,7 +7,7 @@
     %li single jwPlayer is used here
     %li
       playlist
-      = link_to 'RSS(XML) from jwplayer.com', 'http://content.jwplatform.com/feeds/13ShtP5m.rss', :target => '_blank'
+      = link_to 'RSS(XML) from jwplayer.com', 'https://content.jwplatform.com/feeds/13ShtP5m.rss', :target => '_blank'
       (standard RSS with proper video urls)
       is set as attribute, when creating jwPlayer instance
     %li
@@ -45,6 +45,6 @@
 
 = render :partial => 'templates/playlist_item'
 
-= javascript_include_tag "http://content.jwplatform.com/libraries/gJahAIRn.js"
+= javascript_include_tag "https://content.jwplatform.com/libraries/gJahAIRn.js"
 = javascript_include_tag "tmpl"
 = javascript_include_tag "players/via_rss"
